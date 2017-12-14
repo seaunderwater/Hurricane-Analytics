@@ -1,0 +1,5 @@
+install.packages("syuzhet")
+library(syuzhet)
+asdf = read.csv("C:\\Users\\Pete\\Documents\\RStudio\\output_with_sentiment.csv")
+asdf = subset(asdf, time_zone=="Pacific Time (US & Canada)" | time_zone=="Eastern Time (US & Canada)" | time_zone=="Central Time (US & Canada)" | time_zone=="Mountain Time (US & Canada)")
+write.csv(asdf, file="C:\\Users\\Pete\\Documents\\RStudio\\us_output_with_sentiment.csv")

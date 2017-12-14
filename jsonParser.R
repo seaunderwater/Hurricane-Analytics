@@ -5,7 +5,8 @@ library(data.table)
 args <- commandArgs(TRUE)
 dir <- args[1]
 output <- args[2]
-
+print (args[1])
+print (args[2])
 files <- list.files(dir,recursive=T, full.names = TRUE)
 file.create(output, overwrite=TRUE)
 
@@ -44,4 +45,5 @@ for(i in 1:length(files)) {
   close(input)
   
 }
+
 
